@@ -4,5 +4,5 @@
 + It acts as an intermediary or "middleman," enabling applications to interact without the need for developers to know the internal details of how the other system works. 
 
 ## Hosting Link:
-https://api-program.netlify.app/day-1/
+https://api-program.netlify.app/
 
