@@ -1,0 +1,45 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    height:100vh;
+}
+
+.container{
+    display:flex;
+    flex-direction: column;
+    gap:2rem;
+}
+
+.title {
+    background-color: black;
+    color:white;
+    font-size: 2.5rem;
+     text-align: center;
+}
+
+.subtitle{
+    font-size: 1.5rem;
+    text-align: center;
+    
+}
+
+.title ,.subtitle{
+    font-family: poppins,sans-serif;
+}
+
+#users{
+    background: #ffff;
+    border:2px solid black;
+    border-radius: 1rem;
+    padding:2rem;
+    display:flex;
+    flex-direction: column;    
+}
