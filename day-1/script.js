@@ -7,6 +7,7 @@ async function userdata() {
     }
     const data = await response.json();
     const persons = document.getElementById("users");
+    //table format
     let tableHTML=`
       <table border="1" cellspacing="0" cellpadding="5">
         <tr>
