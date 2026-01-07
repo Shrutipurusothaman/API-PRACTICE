@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>API DAY-3 CHALLENGE</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: black;
+            color: white;
+            font-family: poppins, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 10rem auto;
+            background-color: white;
+            color: black;
+            width: fit-content;
+            padding: 2rem 2rem;
+            gap: 2rem;
+            height: auto;
+        }
+
+        .container h2 {
+            font-size: 2rem;
+        }
+
+        p {
+            font-size: 1.5rem;
+        }
+
+        #jokebtn {
+            padding: 1rem;
+            border: none;
+            border-radius: 2rem;
+            background-color: coral;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>API DAY-3 CHALLENGE</h2>
+        <p>Random Joke generator</p>
+        <button id="jokebtn">Generate Jokes</button>
+        <p id="jokes"></p>
+    </div>
+    <script>
+        const jokebtn = document.getElementById("jokebtn");
+        const jokeText = document.getElementById("jokes");
+        jokebtn.addEventListener("click", getJoke);
+        async function getJoke() {
+            try {
+                const response = await fetch("https://official-joke-api.appspot.com/random_joke");
+                const data = await response.json();
+
+                jokeText.innerText = `${data.setup} 😂 ${data.punchline}`;
+            } catch (error) {
+                console.log("Error:", error);
+            }
+        }
+    </script>
+</body>
+
+</html>
