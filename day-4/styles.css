@@ -8,7 +8,7 @@ body{
     font-family: poppins,sans-serif;
     background-image: linear-gradient(rgb(0, 162, 255),white);
     background-size: fill;
-    height:100vh;
+    height:100dvh;
     background-repeat: no-repeat;
 }
 .weather-app{
