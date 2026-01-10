@@ -13,7 +13,6 @@ const observer = new IntersectionObserver((entries, observer) => {
 
 async function fetchImages() {
   loading.style.display = "block";
-
   try {
     const res = await fetch(
       `https://api.unsplash.com/photos/random?count=10&client_id=${ACCESS_KEY}`
@@ -25,11 +24,9 @@ async function fetchImages() {
       observer.observe(img);
       gallery.appendChild(img);
     });
-
   } catch (error) {
     console.error("Error fetching images", error);
   }
-
   loading.style.display = "none";
 }
 fetchImages();
